@@ -61,9 +61,11 @@ function SignUpPage() {
       <div className="w-full max-w-md">
         {/* Header Branding */}
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 grid size-12 place-items-center rounded-2xl bg-ink font-display text-xl font-bold text-primary-foreground shadow-lg">
-            M
-          </div>
+          <img
+            src="/logo.png"
+            alt="Merchant Growth AI"
+            className="mx-auto mb-4 size-16 object-contain drop-shadow-md"
+          />
           <h1 className="font-display text-2xl font-bold tracking-tight text-ink sm:text-3xl">
             Start Growing Today
           </h1>

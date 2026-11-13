@@ -167,9 +167,11 @@ export function AppShell({ children }: { children: ReactNode }) {
             )}
           >
             <Link to="/" className={cn("mb-6 flex items-center gap-2.5", !collapsed && "px-1")}>
-              <div className="grid size-10 shrink-0 place-items-center rounded-[10px] bg-ink font-display font-bold text-primary-foreground shadow-sm">
-                M
-              </div>
+              <img
+                src="/logo.png"
+                alt="Merchant Growth AI Logo"
+                className="size-10 shrink-0 object-contain drop-shadow-sm"
+              />
               {!collapsed && (
                 <div className="leading-tight min-w-0">
                   <p className="font-display text-sm font-bold text-ink truncate">Merchant Growth</p>
@@ -211,6 +213,14 @@ export function AppShell({ children }: { children: ReactNode }) {
               >
                 <Menu className="size-5" />
               </button>
+              <Link to="/" className="flex items-center gap-2 lg:hidden">
+                <img
+                  src="/logo.png"
+                  alt="Merchant Growth AI"
+                  className="size-8 object-contain"
+                />
+                <span className="font-display text-sm font-bold text-ink">Merchant Growth</span>
+              </Link>
 
               <div className="ml-auto flex items-center gap-2 sm:gap-3">
                 {/* Search / Command Trigger */}
@@ -351,7 +361,14 @@ export function AppShell({ children }: { children: ReactNode }) {
         {/* Mobile Side Sheet */}
         <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
           <SheetContent side="left" className="w-72 p-5">
-            <SheetTitle className="mb-6 font-display font-bold">Merchant Growth AI</SheetTitle>
+            <div className="mb-6 flex items-center gap-2.5">
+              <img
+                src="/logo.png"
+                alt="Merchant Growth AI"
+                className="size-8 shrink-0 object-contain"
+              />
+              <SheetTitle className="font-display font-bold">Merchant Growth AI</SheetTitle>
+            </div>
             <SideNav collapsed={false} onNavigate={() => setMobileOpen(false)} />
           </SheetContent>
         </Sheet>
