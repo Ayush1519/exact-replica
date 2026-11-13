@@ -14,6 +14,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AppShell } from "@/components/app/app-shell";
 import { Toaster } from "@/components/ui/sonner";
+import { AppProvider } from "@/lib/store/app-context";
 
 function NotFoundComponent() {
   return (
@@ -88,8 +89,10 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <AppShell><Outlet /></AppShell>
-      <Toaster position="top-right" />
+      <AppProvider>
+        <AppShell><Outlet /></AppShell>
+        <Toaster position="top-right" />
+      </AppProvider>
     </QueryClientProvider>
   );
 }

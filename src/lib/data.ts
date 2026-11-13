@@ -60,9 +60,9 @@ export const customers = [
 ];
 
 export const recommendations = [
-  { id: "r1", tone: "growth" as const, title: "Bundle the top two items", body: "Customers who buy the Ceramic Pour-Over often add the Kettle — a bundle could lift average order value ~$6.", cta: "Create bundle", impact: "+$1.9k / mo" },
-  { id: "r2", tone: "growth" as const, title: "Re-engage 240 lapsed buyers", body: "A short win-back email to 240 customers who paused 45 days ago is projected to recover $3.1k.", cta: "Launch campaign", impact: "+$3.1k" },
-  { id: "r3", tone: "warn" as const, title: "Restock the Warm Clay Tumbler", body: "Selling ~18/day with 34 left — you'll run dry in under two days at the current pace.", cta: "Reorder now", impact: "Avoid $720 lost" },
+  { id: "r1", tone: "growth" as const, title: "Bundle the top two items", body: "Customers who buy the Ceramic Pour-Over often add the Kettle — a bundle could lift average order value ~₹6.", cta: "Create bundle", impact: "+₹1.9k / mo" },
+  { id: "r2", tone: "growth" as const, title: "Re-engage 240 lapsed buyers", body: "A short win-back email to 240 customers who paused 45 days ago is projected to recover ₹3.1k.", cta: "Launch campaign", impact: "+₹3.1k" },
+  { id: "r3", tone: "warn" as const, title: "Restock the Warm Clay Tumbler", body: "Selling ~18/day with 34 left — you'll run dry in under two days at the current pace.", cta: "Reorder now", impact: "Avoid ₹720 lost" },
 ];
 
 export const campaigns = [
@@ -71,4 +71,4 @@ export const campaigns = [
   { name: "Summer Cold Brew", channel: "Instagram", status: "Completed", reach: 5400, revenue: 6890, progress: 100 },
 ];
 
-export const money = (n: number) => "$" + n.toLocaleString("en-US");
+export const money = (n: number) => "₹" + n.toLocaleString("en-IN");
